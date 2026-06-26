@@ -1,0 +1,43 @@
+#!/bin/sh
+
+lang=ja
+dir="$HOME/Projects/whisper.cpp"
+server="$dir/build/bin/whisper-server"
+model="$dir/models/ggml-large-v3.bin"
+vad="$dir/models/ggml-silero-v6.2.0.bin"
+threads=8
+host=127.0.0.1
+port=8642
+wav="${XDG_RUNTIME_DIR:-/tmp}/transcription.wav"
+
+serve() {
+	pgrep -x whisper-server >/dev/null && return
+	setsid "$server" -m "$model" -t "$threads" -l "$lang" \
+		--vad -vm "$vad" --host "$host" --port "$port" >/dev/null 2>&1 &
+}
+
+case "${1-}" in
+load)
+	serve
+	;;
+unload)
+	pkill -x whisper-server
+	notify-send "whisper-server was stopped." -t 2000
+	;;
+*)
+	if pid=$(pgrep -xn pw-record); then
+		kill -INT "$pid"
+		tail --pid="$pid" -f /dev/null
+		serve
+		curl -s --retry 60 --retry-delay 3 --retry-connrefused \
+			"http://$host:$port/inference" \
+			-F file=@"$wav" -F language="$lang" -F response_format="text" |
+			xclip -selection clipboard
+		rm -f "$wav"
+		notify-send "Audio was transcribed." -t 2000
+	else
+		setsid pw-record --rate 16000 --channels 1 --format s16 \
+			-P '{ stream.capture.sink=true }' "$wav" >/dev/null 2>&1 &
+	fi
+	;;
+esac
