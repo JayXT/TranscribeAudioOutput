@@ -14,7 +14,7 @@ A GNU/Linux bash script that allows to transcribe system audio output via whispe
 
 ### Preparation Guide:
 
-1. Copy the script into a directory under [PATH](https://www.digitalocean.com/community/tutorials/how-to-view-and-update-the-linux-path-environment-variable).
+1. Copy the transcribe_audio_output script into a directory under [PATH](https://www.digitalocean.com/community/tutorials/how-to-view-and-update-the-linux-path-environment-variable).
 2. Change lang and dir parameters in the script to match your target language for transcribing and whisper.cpp directory location.
 3. If models other than ggml-large-v3.bin and ggml-silero-v6.2.0.bin are supposed to be used, update model and vad parameters respectively.
 4. Mark the script as executable via file manager or terminal (e.g. `chmod +x ./transcribe_audio_output`).
@@ -48,7 +48,7 @@ GNU/Linux bash-скрипт, який дозволяє транскрибува�
 
 ### Інструкція з підготовки:
 
-1. Скопіюйте скрипт у директорію, що входить до [PATH](https://itmaster.biz.ua/programming/linux/path-in-linux.html).
+1. Скопіюйте скрипт transcribe_audio_output у директорію, що входить до [PATH](https://itmaster.biz.ua/programming/linux/path-in-linux.html).
 2. Змініть параметри lang і dir у скрипті відповідно до потрібної мови транскрибування та розташування каталогу whisper.cpp.
 3. Якщо планується використання інших моделей, ніж ggml-large-v3.bin та ggml-silero-v6.2.0.bin, оновіть параметри model та vad відповідно.
 4. Зробіть скрипт виконуваним через файловий менеджер або термінал (наприклад, `chmod +x ./transcribe_audio_output`).
