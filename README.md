@@ -19,10 +19,12 @@ A GNU/Linux bash script that allows to transcribe system audio output via whispe
 3. If models other than ggml-large-v3.bin and ggml-silero-v6.2.0.bin are supposed to be used, update model and vad parameters respectively.
 4. Mark the script as executable via file manager or terminal (e.g. `chmod +x ./transcribe_audio_output`).
 5. Assign a certain shortcut (e.g. Super+X) to transcribe audio with the script in your system settings or configuration. For example:
-<img width="644" height="212" alt="image" src="https://github.com/user-attachments/assets/bb055f5b-36ee-4fd2-ad2c-0d614d9240ac" />
+
+   <img width="644" height="212" alt="image" src="https://github.com/user-attachments/assets/bb055f5b-36ee-4fd2-ad2c-0d614d9240ac" />
 
 6. Optionally assign another shortcut (e.g. Shift+Super+X) to unload the whisper-server process from RAM, in your system settings or configuration. For example:
-<img width="644" height="220" alt="image" src="https://github.com/user-attachments/assets/5e8b21da-60dc-4bef-a512-14e738d4d8f9" />
+
+   <img width="644" height="220" alt="image" src="https://github.com/user-attachments/assets/5e8b21da-60dc-4bef-a512-14e738d4d8f9" />
 
 
 ### Use Guide:
