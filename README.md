@@ -25,7 +25,7 @@ A GNU/Linux bash script that allows to transcribe system audio output via whispe
 <img width="644" height="220" alt="image" src="https://github.com/user-attachments/assets/5e8b21da-60dc-4bef-a512-14e738d4d8f9" />
 
 
-### Guide for daily use:
+### Use Guide:
 
 1. Press the assigned shortcut for transcribing in order to start recording system audio.
 2. Play your audio.
@@ -60,7 +60,7 @@ GNU/Linux bash-скрипт, який дозволяє транскрибува�
 
    <img width="644" height="220" alt="image" src="https://github.com/user-attachments/assets/5e8b21da-60dc-4bef-a512-14e738d4d8f9" />
 
-### Інструкція зі щоденного використання:
+### Інструкція з використання:
 
 1. Натисніть призначену комбінацію клавіш для транскрибування, щоб почати запис системного аудіо.
 2. Запустіть відтворення аудіо.
