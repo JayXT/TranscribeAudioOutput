@@ -8,7 +8,7 @@ A GNU/Linux bash script that allows to transcribe system audio output via whispe
 
 - Configured [whisper.cpp](https://github.com/ggml-org/whisper.cpp)
 - Downloaded main model and voice activity detection model.
-- xclip for clipboard copy.
+- xclip (on X11) or wl-clipboard (on Wayland) for clipboard copy.
 - PipeWire audio subsystem for sound recording via pw-record.
 - curl for making requests to whisper-server.
 
@@ -42,7 +42,7 @@ GNU/Linux bash-скрипт, який дозволяє транскрибува�
 
 - Налаштований [whisper.cpp](https://github.com/ggml-org/whisper.cpp) ([приклад](https://t.me/RefoldUA/165))
 - Завантажена основна модель та модель виявлення голосової активності
-- xclip для копіювання в буфер обміну
+- xclip (на X11) чи wl-clipboard (на Wayland) для копіювання в буфер обміну
 - Аудіо підсистема PipeWire для запису звуку через pw-record
 - curl для надсилання запитів до whisper-server
 
