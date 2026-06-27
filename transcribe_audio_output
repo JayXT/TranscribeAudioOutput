@@ -38,6 +38,7 @@ unload)
 		rm -f "$wav"
 		notify-send "Audio was transcribed." -t 2000
 	else
+		notify-send "Starting recording..." -t 2000
 		setsid pw-record --rate 16000 --channels 1 --format s16 \
 			-P '{ stream.capture.sink=true }' "$wav" >/dev/null 2>&1 &
 	fi
